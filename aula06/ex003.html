@@ -20,9 +20,10 @@
     <h1>Olá, Mundo!</h1>
     <p>Já me livrei da maldição!!</p>
     <script>
-        window.alert('Minha priemira mensagem')
-        window.confirm('Esta gostando de JS?') // Janela com botão 'Ok'e 'cancelar'
-        window.prompt('Qual é o seu nome?') // vai perguntar o nome...
+        var n1 = Number(window.prompt ('Digite um número: ')) // String
+        var n2 = Number(window.prompt ('Digite outro número: ')) // String
+        var soma = n1 + n2
+        window.alert (`A soma entre ${n1} e ${n2} é igual a ${soma}`) // Concatenação
     </script>
 </body>
 </html>
