@@ -7,6 +7,7 @@
     <style>
         body {
             background-color: rgb(24, 30, 102);
+            transition: background-color 0.5;
             color: white;
             font: normal 18pt Arial;
         }
@@ -17,6 +18,8 @@
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div class="msg">Clique em mim</div>
+    <button id="azul">Mudar para azul</button>
+    <button id="verde">Mudar para verde</button>
     <script>
         var corpo = window.document.body
         var p1 = window.document.getElementsByTagName('p')[1]
@@ -27,6 +30,13 @@
         */
        var d = window.document.querySelector('div.msg')
        d.style.background = 'red'
+       // Esse código é um teste de prática
+       window.document.getElementById('azul').addEventListener('click', function() {
+        window.document.body.style.backgroundColor = 'blue';
+       })
+       window.document.getElementById('verde').addEventListener('click', function() {
+        window.document.body.style.backgroundColor = 'green';
+       })
     </script>
 </body>
 </html>
