@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual é o seu país?</title>
+</head>
+<body>
+    <h1>Qual é o seu país?</h1>
+    <input type="text" name="nacio01" id="nacio01">
+    <input id="but01" type="button" value="Enviar">
+    <script>
+        var but = document.querySelector('input#but01')
+        but.addEventListener('click', clicou)
+
+        function clicou() {
+            var nacio = document.getElementById('nacio01').value
+            if (nacio === 'Brasil') {
+                document.write('Você é Brasileiro!');
+            } else {
+                document.write('Você é Estrangeiro!');
+            }
+        }
+    </script>
+</body>
+</html>
