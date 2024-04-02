@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hora do Dia</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: padding-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div#container {
+            width: 600px;
+            height: 350px;
+            border-radius: 10px;
+            margin: auto;
+            background-color: white;
+        }
+
+        div#container  p {
+            padding-top: 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+
+        }
+        div#fotohora {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: black;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hora do Dia</h1>
+    <div id="container">
+        <p id="horasa">Default</p>
+        <div id="fotohora"></div>
+        <p id="mens">Default</p>
+    </div>
+    <script>
+        var agora = new Date()
+        var hora = agora.getHours()
+        var hora = 18
+        var horasa = document.body.querySelector('p#horasa')
+        horasa.innerHTML = (`Agora são ${hora} horas`)
+        if (hora < 12) {
+            document.body.querySelector('p#mens').innerHTML = ('Bom Dia!')
+            document.body.querySelector('div#fotohora').style.background = 'url(./imagens/dia.jpg)'
+            document.body.querySelector('div#fotohora').style.backgroundSize = 'cover'
+            document.body.querySelector('div#fotohora').style.backgroundPosition = 'center bottom'
+            document.body.style.backgroundColor = 'aqua'
+        } else if (hora < 18) {
+            document.body.querySelector('p#mens').innerHTML = ('Boa Tarde!')
+            document.body.querySelector('div#fotohora').style.background = 'url(./imagens/tarde.jpg)'
+            document.body.querySelector('div#fotohora').style.backgroundSize = 'cover'
+            document.body.querySelector('div#fotohora').style.backgroundPosition = 'center bottom'
+            document.body.style.backgroundColor = '#e2be8b'
+        } else {
+            document.body.querySelector('p#mens').innerHTML = ('Boa Noite!')
+            document.body.querySelector('div#fotohora').style.background = 'url(./imagens/noite.jpg)'
+            document.body.querySelector('div#fotohora').style.backgroundSize = 'cover'
+            document.body.querySelector('div#fotohora').style.backgroundPosition = 'right bottom'
+            document.body.style.background = '#11114e'
+            document.body.querySelector('h1').style.color = 'white'
+        }
+    </script>
+    
+</body>
+</html>
