@@ -19,6 +19,15 @@ section {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.364);
 }
 
+#imagem {
+    display: none;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: blue;
+    margin: auto;
+}
+
 footer {
     color: white;
     text-align: center;
