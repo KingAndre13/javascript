@@ -10,8 +10,11 @@ function clicou() {
     var rchecked = document.querySelector('input[type="radio"]:checked')
     var id = rchecked.id
     var msg = document.querySelector('p#msg')
+    if (anonas === 0 || anonas > ano) {
+        window.alert('[ERRO] Verifique os dados e tente novamente!')
+    }
 
-    if (id === "sxm" && idade < 12) {
+    else if (id === "sxm" && idade < 12) {
         msg.innerHTML = `Você é um menino de ${idade} anos!`
         msg.style.textAlign = 'center'
         document.querySelector('div#imagem').style.display = 'block'
