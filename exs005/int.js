@@ -24,6 +24,9 @@ function adicionar() {
     }
 
 function finalizar() {
+    if(n.length == 0) {
+       window.alert('Adicione valores antes de finalizar!') 
+    } else {
     n.sort()
     let soma = 0
     for(let sm = 0; sm < n.length; sm++) {
@@ -36,6 +39,7 @@ function finalizar() {
     <p>O menor valor informado foi ${n[0]}
     <p>Somando todos os valores, temos ${soma}.
     <p>A média dos valores digitados é ${div}.`
+    }
 }
 
 
