@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #156c35;
+}
+
+header {
+    background-color: #FF6633;
+    padding: 10px;
+}
+
+header h1 {
+    color: #156c35;
+
+}
+
+main {
+    padding: 10px;
+    color: white;
+}
+
+#pri > h2 {
+    font-size: 40px;
+}
+
+#pri > p {
+    font-size: 20px;
+}
+
+#sec {
+    margin-top: 10px;
+    font-size: 26px;
+}
+
+#sec > p input {
+    height: 25px;
+}
+
+#sec #bot {
+    height: 40px;
+    width: 75px;
+    border-radius: 10px;
+    border: 0px solid;
+}
