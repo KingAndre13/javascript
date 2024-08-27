@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: orange;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+section#carros table {
+    
+    border-collapse: collapse;
+}
+
+section#carros table th, td {
+    border: 2px solid black;
+    text-align: center;
+}
