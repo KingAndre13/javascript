@@ -33,7 +33,7 @@
 
 export default data*/
 
-const isLocalhost = Boolean(
+/*const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
     
     window.location.hostname === '[::1]' ||
@@ -150,4 +150,42 @@ export function unregister() {
             registration.unregister()
         })
     }
+}*/
+// camelCase umDoisTresQuatro
+/*function criarCelular(marcaCelular,tamanhoTela, capacidadeBateria) {
+    return {
+        marcaCelular,
+        tamanhoTela,
+        capacidadeBateria,
+        ligar() {
+            console.log("Fazendo ligação")
+        }
+    }
 }
+
+//Pascal Case - UmDoisTresQuatro
+function Celular(marcaCelular, tamanhoTela, capacidadeBateria) {
+        this.marcaCelular = marcaCelular,
+        this.tamanhoTela = tamanhoTela,
+        this.capacidadeBateria = capacidadeBateria,
+        this.ligar = function() {
+            console.log("Fazendo Ligação...")
+        }
+}
+
+const celular = new Celular("Sansung", 5.9, 5000)
+console.log(celular)*/
+
+function FuncionarioAtacadao (nome, idade, setor, funcao, matricula) {
+    this.nome = nome,
+    this.idade = idade,
+    this.setor = setor,
+    this.funcao = funcao,
+    this.matricula = matricula,
+    this.ponto = function() {
+        console.log(`O ${nome} chegou na ${setor}.`)
+    }
+}
+
+const funcionario = new FuncionarioAtacadao("Juan", 25, "Frente de Caixa", "Apoio da Frente de Caixa", 393538)
+console.log(funcionario)
