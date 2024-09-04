@@ -189,4 +189,5 @@ function FuncionarioAtacadao (nome, idade, setor, funcao, matricula) {
 
 const funcionario1 = new FuncionarioAtacadao("Juan", 25, "Frente de Caixa", "Apoio da Frente de Caixa", 393538)
 const funcionario2 = new FuncionarioAtacadao("Carla", 25, "Frente de Caixa", "Operador(a) de Caixa", 355464)
-console.log(funcionario2)
+const funcionario3 = new FuncionarioAtacadao("Isaac", 19, "Frente de Caixa", "Empacotador", 429765 )
+console.log(funcionario3)
