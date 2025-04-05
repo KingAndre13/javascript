@@ -1,12 +1,4 @@
-a.addEventListener('click', clicarSteveR)
-b.addEventListener('mouseenter', pilotoInjustisado)
-
-function clicarSteveR() {
-    let a = document.getElementById('ca')
-    a.innerText = 'Jesus é a Salvação!'
-}
-
-function pilotoInjustisado() {
-    let b = document.getElementById('pi')
-    b.innerText = 'Helmut Marko é um velho Gagá!'
-}
+let nome = 'André'
+let serie = '3ºB'
+let nota = 5.5
+window.alert(`O aluno ${nome} da classe ${serie} tirou a média ${nota}`)
