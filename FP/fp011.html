@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Só para inglês ver</title>
+</head>
+<body>
+    <input type="number" name="pn1" id="pn1"> +
+    <input type="number" name="pn2" id="pn2">
+    <input id="somar" type="button" value="somar">
+    <div><strong>Resultado</strong></div>
+
+    <script>
+        var e_soma = window.document.querySelector('input#somar')
+        e_soma.addEventListener('click', somar)
+        
+
+        function somar() {
+            var tn1 = window.document.querySelector('input#pn1')
+            var tn2 = window.document.querySelector('input#pn2')
+            var res = window.document.querySelector('div')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerHTML = `A Soma entre ${n1} e ${n2} é igual a ${s}`
+        }
+    </script>
+</body>
+</html>
