@@ -1,18 +1,19 @@
 let numPDV = [1, 2, 3, 4, 5]
-let operadores = ['André Diogo', 'Carla Christine', 'Juan Felipe', 'Savio Henrique']
-
+var pessoaOperador = {
+    nome:'André Diogo',
+    matricula: 367417
+}
 
 let numCaixa = window.document.querySelector('p#numCaixa')
-numCaixa.innerHTML = `Caixa ${numPDV[4]}`
+numCaixa.innerHTML = `Caixa ${numPDV[2]}`
 
-let operador = window.document.getElementById('operador')
-operador.innerHTML = `Operador: ${operadores[1]}`
+
 
 const hora = () => {
     const agora = new Date()
     const dia = agora.getDate().toString().padStart(2, '0')
-    const mes = agora.getMonth().toString().padStart(2, '0')
-    const ano = agora.getFullYear().toString().padStart(2, '0')
+    const mes = agora.getMonth().toString().padStart(1, '0')
+    const ano = agora.getFullYear().toString()
     const horas = agora.getHours().toString().padStart(2, '0')
     const minutos = agora.getMinutes().toString().padStart(2, '0')
     const segundos = agora.getSeconds().toString().padStart(2, '0')
@@ -25,5 +26,49 @@ setInterval(hora, 1000)
 
 
 let statusCaixa = window.document.querySelector('h2#cstatus')
-statusCaixa.innerHTML = 'Caixa Aberto'
+statusCaixa.innerHTML = 'Caixa Fechado'
+
+let matricula = window.document.getElementById('in-matricula')
+matricula.focus()
+
+let e_botao = window.document.getElementById('botao_entrar')
+
+e_botao.addEventListener('click', entrar_matricula)
+
+let mainDiv = window.document.querySelector('div.main-box')
+let listaCompras = window.document.querySelector('div#lista_compras')
+
+
+function entrar_matricula() {
+    if (Number(matricula.value) === 367417) {
+        let operador = window.document.getElementById('operador')
+        const {nome} = pessoaOperador;
+        operador.innerHTML = `Operador: ${nome}`
+        resetTela()
+    } else {
+        alert('Operador não cadastrado!')
+    }
+}
+
+
+const resetTela = () => {
+    statusCaixa.innerHTML = 'Caixa Aberto'
+    matricula.style.display = 'none'
+    e_botao.style.display = 'none'
+    mainDiv.style.margin = '0px'
+    listaCompras.style.display = 'flex'
+}
+
+const iniciarVenda = () => {
+    document.getElementById('s_cpf').onclick = function () {
+        let informarCpf = window.document.querySelector('div#informeCpf')
+        informarCpf.style.display = 'none'
+        let campoCpf = document.querySelector('div#campoCpf')
+        campoCpf.style.display = 'block'
+    }
+
+    
+}
+
+iniciarVenda()
 

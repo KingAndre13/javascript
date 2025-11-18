@@ -34,6 +34,122 @@ section#lista {
     border-radius: 10px;
 }
 
+div.main-box{
+    margin-top: 400px;
+}
+div.main-box input {
+    height: 80px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 50px;
+    background-color: #8d0801;
+}
+
+div#matricula input {
+    font-size: 2em;
+    width: 600px;
+    height: 80px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    margin-bottom: 5px;
+}
+
+div#matricula input#botao_entrar {
+    background-color: #8d0801;
+    color: #fff;
+    cursor: pointer;
+}
+
+div#matricula input#botao_entrar:hover {
+    background-color: #c02018;
+    
+}
+
+div#matricula input::-webkit-outer-spin-button,
+div#matricula input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div#lista_compras {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 730px;
+    height: 630px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+div#informeCpf {
+    text-align: center;
+}
+
+div#informeCpf button {
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+    height: 50px;
+    color: #fff;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+div#informeCpf button#s_cpf {
+    background-color: rgb(8, 98, 8);
+}
+div#informeCpf button#s_cpf:hover {
+    background-color: rgb(16, 154, 16);
+}
+
+div#informeCpf button#n_cpf {
+    background-color: #9a0606;
+}
+div#informeCpf button#n_cpf:hover {
+    background-color: #ff0000;
+}
+
+div#campoCpf {
+    display: none;
+    text-align: center;
+}
+
+div#campoCpf input{
+    width: 300px;
+    height: 40px;
+    margin-left: 10px;
+    font-size: 1.3em;
+}
+
+div#campoCpf input::-webkit-outer-spin-button,
+div#campoCpf input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div#campoCpf button {
+    width: 50px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8d0801;
+    color: #fff;
+    font-size: 1em;
+    
+}
+div#campoCpf button:hover {
+    background-color: #757575;
+    color: #8d0801;
+    cursor: pointer;
+}
+
 section#status{
     display: flex;
     align-self: flex-end;
