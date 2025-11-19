@@ -4,6 +4,8 @@ var pessoaOperador = {
     matricula: 367417
 }
 
+let cpfCliente = null
+
 let numCaixa = window.document.querySelector('p#numCaixa')
 numCaixa.innerHTML = `Caixa ${numPDV[2]}`
 
@@ -60,14 +62,31 @@ const resetTela = () => {
 }
 
 const iniciarVenda = () => {
-    document.getElementById('s_cpf').onclick = function () {
-        let informarCpf = window.document.querySelector('div#informeCpf')
-        informarCpf.style.display = 'none'
-        let campoCpf = document.querySelector('div#campoCpf')
-        campoCpf.style.display = 'block'
-    }
 
+    let informarCpf = window.document.querySelector('div#informeCpf')
+    let campoCpf = document.querySelector('div#campoCpf')
+
+    document.getElementById('s_cpf').onclick = function () {
+        informarCpf.style.display = 'none'
+        campoCpf.style.display = 'block'
+        let botao = window.document.getElementById('entrar_cpf')
+        botao.onclick = function () {
+            cpfCliente = Number(window.document.querySelector('input#cpf').value)
+            campoCpf.style.display = 'none'
+        }
+    }
     
+    document.getElementById('n_cpf').onclick = function () {
+        cpfCliente = 'Consumidor não Identificado.'
+        informarCpf.style.display = 'none'
+    }
+    
+    let fecharNota = 0
+
+    /*do {
+        
+    } while (fecharNota == 0)
+    */
 }
 
 iniciarVenda()
