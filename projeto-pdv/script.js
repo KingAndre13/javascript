@@ -2,9 +2,8 @@ import { resetTela } from './módulos/resetTela.js';
 import { iniciarVenda } from './módulos/iniciarVenda.js';
 import { Mostarhora } from './módulos/hora.js';
 
-let numPDV = [1, 2, 3, 4, 5]
 let numCaixa = window.document.querySelector('p#numCaixa')
-numCaixa.innerHTML = `Caixa ${numPDV[2]}`
+numCaixa.innerHTML = `Caixa 1`
 
 var pessoaOperador = {
     nome:'André Diogo',
