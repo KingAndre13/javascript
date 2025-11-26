@@ -1,3 +1,4 @@
+import { produtos } from './codigos.js'
 export const iniciarVenda = ({
     informarCpf,
     campoCpf,
@@ -5,7 +6,10 @@ export const iniciarVenda = ({
     btnNaoCpf,
     btnEntrarCpf,
     inputCpf,
-    setCpfCliente
+    setCpfCliente,
+    registItems,
+    codigoItems,
+    listaCompras
 }) => {
 
     //Cliente Informou o CPF
@@ -25,4 +29,21 @@ export const iniciarVenda = ({
         setCpfCliente('Consumidor não Identificado.')
         informarCpf.style.display = 'none'
     }
+    
+    registItems.onclick = () => {
+        const codigo = Number(codigoItems.value.trim())
+        const produto = produtos.find(Produto => Produto.codigo === codigo)
+
+        if (produto) {
+            const item = document.createElement('p')
+            item.innerHTML = `<strong>${produto.nomeProduto} - R$${produto.precoProduto.toFixed(2)}</strong>`
+            listaCompras.style.alignItems = 'flex-start'
+            listaCompras.style.justifyContent = 'flex-start'
+            listaCompras.appendChild(item)
+        } else {
+            alert(`Produto não Cadastrado!`)
+        }
+    }
+
+    
 }

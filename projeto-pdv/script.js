@@ -30,6 +30,11 @@ e_botao.addEventListener('click', entrar_matricula)
 
 let mainDiv = window.document.querySelector('div.main-box')
 let listaCompras = window.document.querySelector('div#lista_compras')
+let quantItems = document.querySelector('#quantItems')
+let codItems = document.querySelector('#codItems')
+let registItems = document.querySelector('#entrarqtdCod')
+
+
 
 
 function entrar_matricula() {
@@ -37,7 +42,7 @@ function entrar_matricula() {
         let operador = window.document.getElementById('operador')
         const {nome} = pessoaOperador;
         operador.innerHTML = `Operador: ${nome}`
-        resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras });
+        resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems });
     } else {
         alert('Operador não cadastrado!')
     }
@@ -51,6 +56,7 @@ const btnSimCpf = document.querySelector('#s_cpf')
 const btnNaoCpf = document.querySelector('#n_cpf')
 const btnEntrarCpf = document.querySelector('#entrar_cpf')
 const inputCpf = document.querySelector('#cpf')
+const codigoItems = document.querySelector('#txtcod')
 
 iniciarVenda({
     informarCpf,
@@ -59,6 +65,9 @@ iniciarVenda({
     btnNaoCpf,
     btnEntrarCpf,
     inputCpf,
-    setCpfCliente
+    setCpfCliente,
+    registItems,
+    codigoItems,
+    listaCompras
 });
 

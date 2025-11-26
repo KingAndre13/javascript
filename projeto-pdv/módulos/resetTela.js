@@ -3,11 +3,17 @@ export const resetTela = ({
     matricula,
     e_botao,
     mainDiv,
-    listaCompras
+    listaCompras,
+    quantItems,
+    codItems,
+    registItems
 }) => {
     statusCaixa.innerHTML = 'Caixa Aberto';
     matricula.style.display = 'none';
     e_botao.style.display = 'none';
     mainDiv.style.margin = '0px';
     listaCompras.style.display = 'flex'
+    quantItems.style.display = 'inline-block'
+    codItems.style.display = 'inline-block'
+    registItems.style.display = 'inline-block'
 };

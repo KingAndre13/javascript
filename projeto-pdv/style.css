@@ -48,7 +48,7 @@ div.main-box input {
 
 div#matricula input {
     font-size: 2em;
-    width: 600px;
+    width: 400px;
     height: 80px;
     border-radius: 5px;
     background-color: #ffffff;
@@ -149,6 +149,57 @@ div#campoCpf button:hover {
     color: #8d0801;
     cursor: pointer;
 }
+
+div#codItems input::-webkit-outer-spin-button,
+div#codItems input::-webkit-inner-spin-button,
+div#quantItems input::-webkit-outer-spin-button,
+div#quantItems input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+div#quantItems {
+    display: none;
+    color: #fff;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+}
+div#quantItems input{
+    width: 100px;
+    height: 50px;
+    font-size: 1.6em;
+}
+
+#entrarqtdCod {
+    display: none;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: green;
+    margin-top: 30px;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+
+}
+#entrarqtdCod:hover {
+    background-color: rgb(31, 194, 31);
+}
+
+div#codItems {
+    display: none;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #fff;
+}
+div#codItems input{
+    height: 50px;
+    width: 200px;
+    font-size: 1.4em;
+}
+
+
 
 section#status{
     display: flex;
