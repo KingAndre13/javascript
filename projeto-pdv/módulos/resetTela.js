@@ -6,7 +6,8 @@ export const resetTela = ({
     listaCompras,
     quantItems,
     codItems,
-    registItems
+    registItems,
+    fecharNota
 }) => {
     statusCaixa.innerHTML = 'Caixa Aberto';
     matricula.style.display = 'none';
@@ -16,4 +17,5 @@ export const resetTela = ({
     quantItems.style.display = 'inline-block'
     codItems.style.display = 'inline-block'
     registItems.style.display = 'inline-block'
+    fecharNota.style.display = 'inline-block'
 };

@@ -187,6 +187,23 @@ div#quantItems input{
     background-color: rgb(31, 194, 31);
 }
 
+#fecharNota {
+    display: none;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #ea8725;
+    margin-top: 30px;
+    height: 50px;
+    width: 80px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#fecharNota:hover {
+    background-color: #ff0000;
+}
+
 div#codItems {
     display: none;
     margin-right: 10px;

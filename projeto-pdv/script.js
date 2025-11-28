@@ -2,8 +2,6 @@ import { resetTela } from './módulos/resetTela.js';
 import { iniciarVenda } from './módulos/iniciarVenda.js';
 import { Mostarhora } from './módulos/hora.js';
 
-let numCaixa = window.document.querySelector('p#numCaixa')
-numCaixa.innerHTML = `Caixa 1`
 
 var pessoaOperador = {
     nome:'André Diogo',
@@ -32,6 +30,7 @@ let listaCompras = window.document.querySelector('div#lista_compras')
 let quantItems = document.querySelector('#quantItems')
 let codItems = document.querySelector('#codItems')
 let registItems = document.querySelector('#entrarqtdCod')
+let fecharNota = document.querySelector('#fecharNota')
 
 
 
@@ -41,7 +40,7 @@ function entrar_matricula() {
         let operador = window.document.getElementById('operador')
         const {nome} = pessoaOperador;
         operador.innerHTML = `Operador: ${nome}`
-        resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems });
+        resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems,fecharNota });
     } else {
         alert('Operador não cadastrado!')
     }
