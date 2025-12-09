@@ -15,6 +15,7 @@ Mostarhora({
     horaDisplay: document.querySelector('#hora')
 })
 
+let sectionStatus = document.querySelector('#status')
 
 let statusCaixa = window.document.querySelector('h2#cstatus')
 statusCaixa.innerHTML = 'Caixa Fechado'
@@ -52,6 +53,7 @@ const btnNaoCpf = document.querySelector('#n_cpf')
 const btnEntrarCpf = document.querySelector('#entrar_cpf')
 const inputCpf = document.querySelector('#cpf')
 const codigoItems = document.querySelector('#txtcod')
+const quantNum = document.querySelector('#txtItems')
 
 iniciarVenda({
     informarCpf,
@@ -63,5 +65,7 @@ iniciarVenda({
     setCpfCliente,
     registItems,
     codigoItems,
-    listaCompras
+    listaCompras,
+    quantNum,
+    statusCaixa
 });

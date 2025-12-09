@@ -17,3 +17,4 @@ function voltar() {
     a.style.color = 'red'
     a.innerText = 'Luzes vermelhas vão se acendendo...'
 }
+

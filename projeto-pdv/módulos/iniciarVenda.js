@@ -10,6 +10,8 @@ export const iniciarVenda = ({
     registItems,
     codigoItems,
     listaCompras,
+    quantNum,
+    statusCaixa
 }) => {
 
     //Cliente Informou o CPF
@@ -30,22 +32,34 @@ export const iniciarVenda = ({
         informarCpf.style.display = 'none'
     }
     let c = 1
+    let subTotal = 0
     registItems.onclick = () => {
         const codigo = Number(codigoItems.value.trim())
         const produto = produtos.find(Produto => Produto.codigo === codigo)
         listaCompras.style.display = 'block'
+
+        if (quantNum.value == 0) {
+            alert('Informe a quantidade!')
+        } else {
+
             if (produto) {
                 const item = document.createElement('p')
-                item.innerHTML = `<strong> <${c}> ${produto.nomeProduto} - R$${produto.precoProduto.toFixed(2)}</strong>`
+                item.innerHTML = `<strong> <${c}> ${Number(quantNum.value)}UND - ${produto.nomeProduto} - ${produto.precoProduto.toFixed(2)} - R$${(produto.precoProduto * Number(quantNum.value)).toFixed(2)}</strong>`
                 listaCompras.style.alignItems = 'flex-start'
                 listaCompras.style.justifyContent = 'flex-start'
                 listaCompras.appendChild(item)
+                listaCompras.scrollTop = listaCompras.scrollHeight
+                subTotal = subTotal + Number((produto.precoProduto * Number(quantNum.value)))
             } else {
-                alert(`Produto não Cadastrado!`)
+                alert('Produto não cadastardo!')
             }
-        c++
-    }
-        
+            c++
+        }
 
-    
+        statusCaixa.textContent = `TOTAL: R$${subTotal.toFixed(2)}`
+        
+    }
+
+
+
 }
