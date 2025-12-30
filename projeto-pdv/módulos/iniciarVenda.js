@@ -44,7 +44,7 @@ export const iniciarVenda = ({
 
             if (produto) {
                 const item = document.createElement('p')
-                item.innerHTML = `<strong> <${c}> ${Number(quantNum.value)}UND - ${produto.nomeProduto} - ${produto.precoProduto.toFixed(2)} - R$${(produto.precoProduto * Number(quantNum.value)).toFixed(2)}</strong>`
+                item.innerHTML = `<strong> <${c}> ${Number(quantNum.value)} UND - ${produto.nomeProduto} - ${produto.precoProduto.toFixed(2)} - R$${(produto.precoProduto * Number(quantNum.value)).toFixed(2)}</strong>`
                 listaCompras.style.alignItems = 'flex-start'
                 listaCompras.style.justifyContent = 'flex-start'
                 listaCompras.appendChild(item)
@@ -60,6 +60,6 @@ export const iniciarVenda = ({
         
     }
 
-
+    
 
 }

@@ -171,17 +171,19 @@ div#quantItems input{
     height: 50px;
     font-size: 1.6em;
 }
-
-#entrarqtdCod {
+.buttons {
     display: none;
     border: none;
     border-radius: 10px;
     color: #fff;
-    background-color: green;
     margin-top: 30px;
     height: 50px;
     width: 80px;
     cursor: pointer;
+    margin-left: 10px;
+}
+#entrarqtdCod {
+    background-color: green;
 
 }
 #entrarqtdCod:hover {
@@ -189,20 +191,15 @@ div#quantItems input{
 }
 
 #fecharNota {
-    display: none;
-    border: none;
-    border-radius: 10px;
-    color: #fff;
     background-color: #ea8725;
-    margin-top: 30px;
-    height: 50px;
-    width: 80px;
-    cursor: pointer;
-    margin-left: 10px;
 }
 
 #fecharNota:hover {
     background-color: #ff0000;
+}
+
+#cancelarItem {
+    background-color: #EF4444;
 }
 
 div#codItems {

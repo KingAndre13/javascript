@@ -26,6 +26,7 @@ let quantItems = document.querySelector('#quantItems')
 let codItems = document.querySelector('#codItems')
 let registItems = document.querySelector('#entrarqtdCod')
 let fecharNota = document.querySelector('#fecharNota')
+let cancelarItem = document.querySelector('#cancelarItem')
 
 let operador = window.document.getElementById('operador')
 const {nome} = pessoaOperador;
@@ -42,7 +43,7 @@ e_botao.addEventListener('click', () => {
         Nmatricula: txtNmatricula
     })
 
-    resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems, fecharNota })
+    resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems, fecharNota, cancelarItem })
 })
 
 const setCpfCliente = value => cpfCliente = value;
