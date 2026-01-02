@@ -37,11 +37,15 @@ e_botao.addEventListener('click', () => {
 
     const txtNmatricula = Number(matricula.value)
 
-    entrarMatricula({
+    const loginSucesso = entrarMatricula({
         operador,
         nome,
         Nmatricula: txtNmatricula
     })
+
+    if (!loginSucesso) {
+        return
+    }
 
     resetTela({ statusCaixa, matricula, e_botao, mainDiv, listaCompras, quantItems, codItems, registItems, fecharNota, cancelarItem })
 })
