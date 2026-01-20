@@ -9,7 +9,7 @@ export const Mostarhora = ({ horaDisplay}) => {
         const minutos = agora.getMinutes().toString().padStart(2, '0')
         const segundos = agora.getSeconds().toString().padStart(2, '0')
 
-        horaDisplay.textContent = `${dia}/${mes}/${ano} ${horas}:${minutos}:${segundos}`
+        horaDisplay.textContent = `${dia}/${mes+1}/${ano} ${horas}:${minutos}:${segundos}`
     }
 
     hora()
