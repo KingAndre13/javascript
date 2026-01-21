@@ -11,7 +11,9 @@ export const iniciarVenda = ({
     codigoItems,
     listaCompras,
     quantNum,
-    statusCaixa
+    statusCaixa,
+    cancelarItem,
+    conteinerCancelar
 }) => {
 
     //Cliente Informou o CPF
@@ -57,7 +59,11 @@ export const iniciarVenda = ({
         }
 
         statusCaixa.textContent = `TOTAL: R$${subTotal.toFixed(2)}`
+    
+    cancelarItem.onclick = () => {
+        conteinerCancelar.style.display = 'inline-block'
         
+    }
     }
 
     

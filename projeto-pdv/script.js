@@ -27,6 +27,7 @@ let codItems = document.querySelector('#codItems')
 let registItems = document.querySelector('#entrarqtdCod')
 let fecharNota = document.querySelector('#fecharNota')
 let cancelarItem = document.querySelector('#cancelarItem')
+let conteinerCancelar = document.querySelector('#conteinerCancelar')
 
 let operador = window.document.getElementById('operador')
 const {nome} = pessoaOperador;
@@ -72,5 +73,7 @@ iniciarVenda({
     codigoItems,
     listaCompras,
     quantNum,
-    statusCaixa
+    statusCaixa,
+    cancelarItem,
+    conteinerCancelar
 });
